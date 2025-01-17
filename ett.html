@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tre.css">
+</head>
+<body>
+    <div id="flex-container"> 
+        <img src="dice1.png" class="dice" alt="">
+        <img src="dice2.png" class="dice" alt="">
+        <img src="dice3.png" class="dice" alt="">
+        <img src="dice4.png" class="dice" alt="">
+        <img src="dice5.png" class="dice" alt="">
+        <img src="dice6.png" class="dice" alt="">
+        <button onclick="rool()"> kasta tärningar! </button>
+
+    </div>
+    <script>
+        function rool(){
+            
+            dice= document.getElementsByClassName("dice")
+            for(let i =0;i < 6; i++){
+                Number= Math.floor( Math.random()*6) + 1
+                dice[i].src = "dice" + Number + ".png"
+            }
+        }
+    </script>
+</body>
+</html>
